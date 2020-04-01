@@ -1,4 +1,4 @@
-# nodespull
+# Nodespull
 
 An interface to help you configure and run stable, scalable Node.js api servers in minutes.
 With single-line commands, Nodespull can implement JWT-based authentication, server routing, database modeling (and deployment), emailing services, mobile services, scheduled tasks, and much more.
@@ -55,10 +55,10 @@ $.startServer(8080); // start server on port 8080
 ```
 
 See tutorials to learn more.
-* [Getting Started](http://www.dropwizard.io/1.0.2/docs/)
-* [Create or secure a route](http://www.dropwizard.io/1.0.2/docs/)
-* [Configure database](http://www.dropwizard.io/1.0.2/docs/)
-* [Create and manage database models](http://www.dropwizard.io/1.0.2/docs/)
+* [Getting Started](https://github.com/kab-zac/nodespull/blob/master/Pending)
+* [Create or secure a route](https://github.com/kab-zac/nodespull/blob/master/Pending)
+* [Configure database](https://github.com/kab-zac/nodespull/blob/master/Pending)
+* [Create and manage database models](https://github.com/kab-zac/nodespull/blob/master/Pending)
 
 
 
@@ -79,7 +79,7 @@ After the instructions above, you should be able to send a GET request to "local
 ## Deployment
 
 Your server can be deployed whenever you're ready. Follow the Nodespull Deployment Checklist to ensure a successful release.
-* [Deployment Checklist](http://www.dropwizard.io/1.0.2/docs/)
+* [Deployment Checklist](https://github.com/kab-zac/nodespull/blob/master/Pending)
 
 <!-- ## Contributing
 
@@ -87,7 +87,7 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 ## Authors
 
-* **Isaac Kabuika** - [Isaackbn](https://github.com/PurpleBooth)
+* **Isaac Kabuika** - [Isaackbn](https://github.com/kab-zac/)
 
 <!-- See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project. -->
 
