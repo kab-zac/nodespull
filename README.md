@@ -1,11 +1,11 @@
-# Nodespull
+# nodespull
 
 An interface to help you configure and run stable, scalable Node.js api servers in minutes.
-With single-line commands, Nodespull can implement JWT-based authentication, server routing, database modeling (and deployment), emailing services, mobile services, scheduled tasks, and much more.
+With single-line commands, nodespull can implement JWT-based authentication, server routing, database modeling (and deployment), emailing services, mobile services, scheduled tasks, and much more.
 
 ## Getting Started
 
-These instructions will get you started with Nodespull.
+These instructions will get you started with nodespull.
 
 ### Prerequisites
 
@@ -13,16 +13,17 @@ Make sure that you have access to a MySQL database server.
 
 ### Installing
 
-Download and install the Nodespull package from npm
-
-```
-npm i nodespull
-```
 
 Create a node.js project on your machine
 
 ```
 npm init
+```
+
+Download and install the nodespull package from npm
+
+```
+npm i nodespull
 ```
 
 Start a mysql database server, whether local or remote (it doesn't matter),
@@ -45,12 +46,25 @@ Write your first route and its controller using nodespull
 const $ = require("nodespull");
 
 $.routes
-.whenGET("/welcome")
-.then((data, reply)=>{
-    reply.ok({message:"hello world"})
+.whenGET("/welcome", client =>{
+    client.reply.ok({message:"hello world"})
 })
 
 $.startServer(8080); // start server on port 8080
+
+```
+
+To save the database variables (and avoid entering them at boot-time), call the saveModels function as shown below
+
+```
+const username = "root";
+const password = "myPassword"
+const host = "localhost"
+const database = "myDatabase"
+const port = 3306 // or any port from which the database server is accessed
+$.saveModels(username,password,host,database,port);
+
+$.startServer(8080);
 
 ```
 
@@ -78,7 +92,7 @@ After the instructions above, you should be able to send a GET request to "local
 
 ## Deployment
 
-Your server can be deployed whenever you're ready. Follow the Nodespull Deployment Checklist to ensure a successful release.
+Your server can be deployed whenever you're ready. Follow the nodespull Deployment Checklist to ensure a successful release.
 * [Deployment Checklist](https://github.com/kab-zac/nodespull/blob/master/Pending)
 
 <!-- ## Contributing
