@@ -1,116 +1,58 @@
 # nodespull
 
 An interface to help you configure and run stable, scalable Node.js api servers in minutes.
-With single-line commands, nodespull can implement JWT-based authentication, server routing, database modeling (and deployment), emailing services, mobile services, scheduled tasks, and much more.
+With single-line commands, nodespull can implement JWT-based authentication, server routing, database modeling, and allocate local ports to launch your app (and database).
 
-## Getting Started
+## Installation
 
-These instructions will get you started with nodespull.
+Before installing nodespull, make sure that you have the following:
+* Unix-based OS (e.g. macOS or Linux)
+* Install and start Docker using [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-mac). Although you will not be working with Docker directly, note that this is a nodespull dependency used to containerize your application. 
 
-### Prerequisites
-
-Make sure that you have access to a MySQL database server.
-
-### Installing
-
-
-Create a node.js project on your machine
-
+Download and install the nodespull package from npm.
 ```
 npm init
-```
-
-Download and install the nodespull package from npm
-
-```
 npm i nodespull
 ```
 
-Start a mysql database server, whether local or remote (it doesn't matter),
-
-Open your root file (e.g. index.js), and import the nodespull library
-
+Create your root file (e.g. `index.js`) and import the nodespull library.
 ```
 const $ = require("nodespull");
 
-// will add more codes later
-
-$.startServer(8080); // starts the server on port 8080
-
+$.server.ready();
 ```
 
+You are now ready to get started! 
 
-Write your first route and its controller using nodespull
+## Getting Started
 
+### 1) Initialize your nodespull app
 ```
-const $ = require("nodespull");
-
-$.routes
-.whenGET("/welcome", client =>{
-    client.reply.ok({message:"hello world"})
-})
-
-$.startServer(8080); // start server on port 8080
-
+node <rootFile> init
 ```
+After running the command, you should expect to see `nodespull-README.md` and `/nodespull` folder in your project.
 
-To save the database variables (and avoid entering them at boot-time), call the saveModels function as shown below
-
+### 2) Boot up the database servers
 ```
-const username = "root";
-const password = "myPassword"
-const host = "localhost"
-const database = "myDatabase"
-const port = 3306 // or any port from which the database server is accessed
-$.saveModels(username,password,host,database,port);
-
-$.startServer(8080);
-
+node <rootFile> boot
 ```
+You can run `node <rootFile> status` to verify that `db-portal` and `db-server` are up and running on specific ports. 
 
-See tutorials to learn more.
-* [Getting Started](https://github.com/kab-zac/nodespull/blob/master/Pending)
-* [Create or secure a route](https://github.com/kab-zac/nodespull/blob/master/Pending)
-* [Configure database](https://github.com/kab-zac/nodespull/blob/master/Pending)
-* [Create and manage database models](https://github.com/kab-zac/nodespull/blob/master/Pending)
-
-
-
-## Running your Nodes.js app
-
-Run your root file 
+### 3) Start your app server
+Nodespull also integrates [nodemon](https://www.npmjs.com/package/nodemon) to detect file changes and automatically restart your app server when needed.
 ```
-node index.js
+nodemon <rootFile> run
 ```
-Using a web browser, navigate to localhost:8080 (or any port you entered). You should see a "Congratulations! You're pooling!" message.
-
-
-### Connect to your nodespull api server from a client
-
-After the instructions above, you should be able to send a GET request to "localhost:8080/welcome" using Postman or a web browser. Observe that the response is a JSON object with the phrase "hello world".
-
-
-## Deployment
-
-Your server can be deployed whenever you're ready. Follow the nodespull Deployment Checklist to ensure a successful release.
-* [Deployment Checklist](https://github.com/kab-zac/nodespull/blob/master/Pending)
+Your server should now be up and running! You should be able to access the app server and the db portal with the default information below or specified in the `nodespull-README.md` file. 
+* app server: *http://localhost:8888*
+* db portal : *http://localhost:8889*
 
 <!-- ## Contributing
-
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us. -->
 
 ## Authors
-
 * **Isaac Kabuika** - [Isaackbn](https://github.com/kab-zac/)
-
-<!-- See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project. -->
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/kab-zac/nodespull/blob/master/LICENSE) file for details
