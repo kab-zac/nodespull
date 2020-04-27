@@ -75,8 +75,8 @@ After running either of the above commands, you should see the `/app.modules/tab
 You can also check out your Database Portal to see your new table!
 
 For more information, see the following tutorials:
-* [Database configurations](https://github.com/kab-zac/nodespull/wiki/Database-Configurations)
-* [Setting up your data model](https://github.com/kab-zac/nodespull/blob/master/Pending)
+* [Custom configurations for you database](https://github.com/kab-zac/nodespull/wiki/Database-Configurations)
+* [Data model](https://github.com/kab-zac/nodespull/wiki/Data-Model)
 * [Table relations](https://github.com/kab-zac/nodespull/blob/master/Pending)
 * [Working with the Database Portal](https://github.com/kab-zac/nodespull/blob/master/Pending)
 
