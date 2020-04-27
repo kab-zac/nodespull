@@ -75,7 +75,7 @@ After running either of the above commands, you should see the `/app.modules/tab
 You can also check out your Database Portal to see your new table!
 
 For more information, see the following tutorials:
-* [Custom configurations for you database](https://github.com/kab-zac/nodespull/blob/master/Pending)
+* [Database configurations](https://github.com/kab-zac/nodespull/wiki/Database-Configurations)
 * [Setting up your data model](https://github.com/kab-zac/nodespull/blob/master/Pending)
 * [Table relations](https://github.com/kab-zac/nodespull/blob/master/Pending)
 * [Working with the Database Portal](https://github.com/kab-zac/nodespull/blob/master/Pending)
@@ -106,7 +106,7 @@ path = "/<routeName>"
 * `isProtected` provides and extra layer of security for the route. Setting the value to `true` would require your users to send a **Bearer Token** in the request header, see [JWT Session](https://github.com/kab-zac/nodespull/blob/master/Pending) for more information.
 * `urlParams` defines path parameters.
 
-Nodespull also integrates [Swagger](https://swagger.io/) in your application. Check out `<serverUrl>/api-docs` to view all your service endpoints. (The current nodespull npm version has temporarily removed Swagger).
+Nodespull also integrates [Swagger](https://swagger.io/) in your application. Check out `<serverUrl>/api-docs` to view all your service endpoints. 
 
 For more information, see the following tutorials:
 * [A simple GET method](https://github.com/kab-zac/nodespull/blob/master/Pending)
