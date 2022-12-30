@@ -31,7 +31,7 @@
     "express": "^4.17.1",
     "hash.js": "^1.1.7",
     "jsonwebtoken": "^8.5.1",
-    "mocha": "^7.1.1",
+    "mocha": "^10.2.0",
     "morgan": "^1.10.0",
     "mysql2": "^2.1.0",
     "nodemon": "^2.0.2",
